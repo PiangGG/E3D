@@ -122,7 +122,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
@@ -153,16 +153,20 @@
   <ItemGroup>
     <ClInclude Include="E3DHeader.h" />
     <ClInclude Include="ECommon.h" />
+    <ClInclude Include="ELight.h" />
     <ClInclude Include="EUtil.h" />
-    <ClInclude Include="EVector.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="EMatrix.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="EVector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ECore.cpp" />
+    <ClCompile Include="ELight.cpp" />
     <ClCompile Include="EMatrix.cpp" />
-    <ClCompile Include="EUtil.cpp" />
+    <ClCompile Include="EUtil.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="EVector.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

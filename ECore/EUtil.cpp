@@ -38,7 +38,7 @@ namespace E3D
 		va_list arglist;//可变参数列表
 		//利用栈上的可变参数列表打印输出字符串
 		va_start(arglist,string);
-		vsprintf(buffer,string,arglist);
+		vsprintf_s(buffer,string,arglist);
 		va_end(arglist);
 
 		EString info(buffer);
@@ -46,7 +46,7 @@ namespace E3D
 		*GLogStream << info << std::endl;
 		GLogStream->flush();
 	}
-
+	
 	void CLoseLog()
 	{
 		GLogStream->close();
