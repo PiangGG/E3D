@@ -228,8 +228,8 @@ namespace E3D
 			return EVector3D(x + right.x, y + right.y, z + right.z);
 		}
 
-		//向量减肥
-		inline EVector3D operator+(const EVector3D& right)const
+		//向量减法
+		inline EVector3D operator-(const EVector3D& right)const
 		{
 			return EVector3D(x - right.x, y - right.y, z - right.z);
 		}

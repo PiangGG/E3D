@@ -1,0 +1,15 @@
+﻿  pch.cpp
+  ECore.cpp
+  EFrustum.cpp
+D:\Code\cpp\Gmae Engine\E3D\ECore\EFrustum.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\EFrustum.cpp(47,1): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "pch.h"”?
+  ELight.cpp
+D:\Code\cpp\Gmae Engine\E3D\ECore\ELight.cpp(52,1): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "pch.h"”?
+  EMatrix.cpp
+D:\Code\cpp\Gmae Engine\E3D\ECore\EMatrix.cpp(11,1): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "pch.h"”?
+  EUtil.cpp
+D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.cpp(57,1): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "pch.h"”?
+  EVector.cpp
+D:\Code\cpp\Gmae Engine\E3D\ECore\EVector.cpp(1,1): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "pch.h"”?
+  正在生成代码...

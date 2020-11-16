@@ -153,7 +153,11 @@
   <ItemGroup>
     <ClInclude Include="E3DHeader.h" />
     <ClInclude Include="ECommon.h" />
+    <ClInclude Include="ECore.h" />
+    <ClInclude Include="EFrustum.h" />
+    <ClInclude Include="EGraphics.h" />
     <ClInclude Include="ELight.h" />
+    <ClInclude Include="EMath.h" />
     <ClInclude Include="EUtil.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="EMatrix.h" />
@@ -162,7 +166,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ECore.cpp" />
+    <ClCompile Include="EFrustum.cpp" />
+    <ClCompile Include="EGraphics.cpp" />
     <ClCompile Include="ELight.cpp" />
+    <ClCompile Include="EMath.cpp" />
     <ClCompile Include="EMatrix.cpp" />
     <ClCompile Include="EUtil.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>

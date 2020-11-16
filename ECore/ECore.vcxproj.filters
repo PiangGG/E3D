@@ -45,11 +45,20 @@
     <ClInclude Include="EVector.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="EFrustum.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="EMath.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ECore.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="EGraphics.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ECore.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -63,6 +72,18 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="ELight.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="EFrustum.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ECore.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="EMath.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="EGraphics.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
