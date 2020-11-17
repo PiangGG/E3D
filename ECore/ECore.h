@@ -7,34 +7,34 @@
 namespace E3D
 {
 
-	#define EPOLY_ATTR_2SIDE				0x0001	// Ë«Ãæ
-	#define EPOLY_ATTR_TRANSPARENT			0x0002	// Í¸Ã÷
+	#define EPOLY_ATTR_2SIDE				0x0001	// åŒé¢
+	#define EPOLY_ATTR_TRANSPARENT			0x0002	// é€æ˜
 
 	#define EPOLY_ATTR_SHADE_MODE_PURE      0x0004
 	#define EPOLY_ATTR_SHADE_MODE_CONSTANT  0x0004 // (alias)
 	#define EPOLY_ATTR_SHADE_MODE_FLAT      0x0008
 	#define EPOLY_ATTR_SHADE_MODE_GOURAUD   0x0010
 	#define EPOLY_ATTR_SHADE_MODE_PHONG     0x0020
-	#define EPOLY_ATTR_SHADE_MODE_FASTPHONG 0x0020 // (alias)
-	#define EPOLY_ATTR_SHADE_MODE_TEXTURE   0x0040 
+	#define EPOLY_ATTR_SHADE_MODE_FASTPHONG 0x0020 // (alias)å¤šè¾¹å½¢å±æ€§ç€è‰²æ¨¡å¼FASTPHONG
+	#define EPOLY_ATTR_SHADE_MODE_TEXTURE   0x0040	//å¤šè¾¹å½¢å±æ€§ç€è‰²æ¨¡å¼çº¹ç†
 
 	#define EPOLY_ATTR_VERTEX_POSITION		0x1000
 	#define EPOLY_ATTR_VERTEX_NORMAL		0x2000
 	#define EPOLY_ATTR_VERTEX_UV			0x4000
 
-	#define EPOLY_STATE_ACTIVE				0x0100	// ÓĞĞ§µÄ×´Ì¬
-	#define EPOLY_STATE_CLIPPED				0x0200	// ±»²Ã¼õ×´Ì¬
-	#define EPOLY_STATE_BACKFACE			0x0400	// ±³Ãæ×´Ì¬
+	#define EPOLY_STATE_ACTIVE				0x0100	// æœ‰æ•ˆçš„çŠ¶æ€
+	#define EPOLY_STATE_CLIPPED				0x0200	// è¢«è£å‡çŠ¶æ€
+	#define EPOLY_STATE_BACKFACE			0x0400	// èƒŒé¢çŠ¶æ€
 
-	#define EOBJECT_STATE_ACTIVE			0x0001
-	#define EOBJECT_STATE_VISIBLE			0x0002 
-	#define EOBJECT_STATE_CULLED			0x0004
+	#define EOBJECT_STATE_ACTIVE			0x0001	//æ´»åŠ¨
+	#define EOBJECT_STATE_VISIBLE			0x0002	//å¯è§
+	#define EOBJECT_STATE_CULLED			0x0004	//å‰”é™¤
 
-	// ÎïÌåÌŞ³ıÀàĞÍ
+	// ç‰©ä½“å‰”é™¤ç±»å‹
 	enum CULL_TYPE
 	{
-		CULL_BOX	= 0,	// ÎïÌå°üÎ§ºĞAABBÌŞ³ı
-		CULL_SPHERE	= 1,	// ÎïÌåÇòÌå»ıÌŞ³ı
+		CULL_BOX	= 0,	// ç‰©ä½“åŒ…å›´ç›’AABBå‰”é™¤
+		CULL_SPHERE	= 1,	// ç‰©ä½“çƒä½“ç§¯å‰”é™¤
 	};
 
 	struct EVertex4D;
@@ -42,7 +42,7 @@ namespace E3D
 	typedef std::vector<EVector4D> EVector4DArray;
 	typedef std::vector<EPolyon4D> EPolyon4DArray;
 
-	// ¶¥µã¶ÔÏó,°üº¬¶¥µã,·¨Ïß, uv
+	// é¡¶ç‚¹å¯¹è±¡,åŒ…å«é¡¶ç‚¹,æ³•çº¿, uv
 	struct EVertex4D
 	{
 		EFloat x, y, z, w;
@@ -62,11 +62,11 @@ namespace E3D
 		EVector4D toVector4D() const;
 	};
 
-	// Ãæ
+	// é¢
 	struct EPlane3D
 	{
-		EVector4D	point;	// ÃæÉÏÒ»µã
-		EVector4D	normal;	// ÃæµÄ·¨Ïß
+		EVector4D	point;	// é¢ä¸Šä¸€ç‚¹
+		EVector4D	normal;	// é¢çš„æ³•çº¿
 
 		EPlane3D(){}
 		EPlane3D(const EVector4D &p, const EVector4D &nor);
@@ -74,30 +74,30 @@ namespace E3D
 	};
 
 	// Poly4D1_TYPE
-	// ´Ë¶à±ßĞÎ½á¹¹ÊÇ»ùÓÚ¶¥µãË÷Òı·½Ê½µÄÊı¾İ½á¹¹
+	// æ­¤å¤šè¾¹å½¢ç»“æ„æ˜¯åŸºäºé¡¶ç‚¹ç´¢å¼•æ–¹å¼çš„æ•°æ®ç»“æ„
 	struct EPolyon4D
 	{
-		EInt state;			// ×´Ì¬ĞÅÏ¢
-		EInt attribute;		// ¶à±ßĞÎÎïÀíÊôĞÔ
-		EInt color;			// ¶à±ßĞÎÑÕÉ«
+		EInt state;			// çŠ¶æ€ä¿¡æ¯
+		EInt attribute;		// å¤šè¾¹å½¢ç‰©ç†å±æ€§
+		EInt color;			// å¤šè¾¹å½¢é¢œè‰²
 
 		
-		EVertex4DArray	*verList;		// ÕâÀïµÄÒıÓÃÊÇÖ¸µÄtransformList
-		EInt			verIndex[3];	// ¶¨µãË÷Òı
+		EVertex4DArray	*verList;		// è¿™é‡Œçš„å¼•ç”¨æ˜¯æŒ‡çš„transformList
+		EInt			verIndex[3];	// å®šç‚¹ç´¢å¼•
 
 		EPolyon4D();
 	};
 
 	// POLYF4DV1_TYP
-	// ´Ë¶à±ßĞÎ½á¹¹ÊÇ»ùÓÚ¶¥µã·½Ê½µÄÊı¾İ½á¹¹
+	// æ­¤å¤šè¾¹å½¢ç»“æ„æ˜¯åŸºäºé¡¶ç‚¹æ–¹å¼çš„æ•°æ®ç»“æ„
 	struct EPolyonF4D
 	{
-		EInt state;			// ×´Ì¬ĞÅÏ¢
-		EInt attribute;		// ¶à±ßĞÎÎïÀíÊôĞÔ
-		EInt color;			// ¶à±ßĞÎ¹âÕÕÇ¿¶ÈÑÕÉ«
+		EInt state;			// çŠ¶æ€ä¿¡æ¯
+		EInt attribute;		// å¤šè¾¹å½¢ç‰©ç†å±æ€§
+		EInt color;			// å¤šè¾¹å½¢å…‰ç…§å¼ºåº¦é¢œè‰²
 
-		EVertex4D localList[3];			// ÎïÌå¾Ö²¿×ø±ê
-		EVertex4D transformList[3];		// ÎïÌå¾Ö²¿×ø±ê¾­±ä»»Ö®ºóµÄ×ø±ê
+		EVertex4D localList[3];			// ç‰©ä½“å±€éƒ¨åæ ‡
+		EVertex4D transformList[3];		// ç‰©ä½“å±€éƒ¨åæ ‡ç»å˜æ¢ä¹‹åçš„åæ ‡
 
 		struct EMaterial *material;
 
@@ -110,7 +110,7 @@ namespace E3D
 		{			
 			EFloat zA = Max(polyA.transformList[0].z, Max(polyA.transformList[1].z, polyA.transformList[2].z));
 			EFloat zB = Max(polyB.transformList[0].z, Max(polyB.transformList[1].z, polyB.transformList[2].z));
-			// ÕâÀïĞ´³É < ÔÚdebugÄ£Ê½ÏÂ»á±ÀÀ£
+			// è¿™é‡Œå†™æˆ < åœ¨debugæ¨¡å¼ä¸‹ä¼šå´©æºƒ
 			if (Abs(zA - zB) < 0.005f)
 			{
 				zA = (polyA.transformList[0].z + polyA.transformList[1].z + polyA.transformList[2].z) / 3.0f;
@@ -128,142 +128,142 @@ namespace E3D
 		}
 	};
 
-	// »ùÓÚ¶¨µãÁĞ±íºÍ¶à±ßĞÎÁĞ±íµÄÎïÌå
+	// åŸºäºå®šç‚¹åˆ—è¡¨å’Œå¤šè¾¹å½¢åˆ—è¡¨çš„ç‰©ä½“
 	struct EObject4D
 	{
-		EString			name;			// ÎïÌåÃû³Æ
-		EInt			state;			// ÎïÌå×´Ì¬
-		EInt			attribute;		// ÎïÌåÊôĞÔ
-		EFloat			avgRadius;		// ÎïÌåµÄÆ½¾ù°ë¾¶, ÓÃÓÚÅö×²¼ì²â
-		EFloat			maxRadius;		// ÎïÌåµÄ×î´ó°ë¾¶
+		EString			name;			// ç‰©ä½“åç§°
+		EInt			state;			// ç‰©ä½“çŠ¶æ€
+		EInt			attribute;		// ç‰©ä½“å±æ€§
+		EFloat			avgRadius;		// ç‰©ä½“çš„å¹³å‡åŠå¾„, ç”¨äºç¢°æ’æ£€æµ‹
+		EFloat			maxRadius;		// ç‰©ä½“çš„æœ€å¤§åŠå¾„
 
-		EBool			needCull;		// ÊÇ·ñĞèÒªÖ´ĞĞÌŞ³ı²Ù×÷
+		EBool			needCull;		// æ˜¯å¦éœ€è¦æ‰§è¡Œå‰”é™¤æ“ä½œ
 
-		EString			materiaName;	// Ä£ĞÍ²ÄÖÊµÄÃû³Æ--for Ogre Mesh
+		EString			materiaName;	// æ¨¡å‹æè´¨çš„åç§°--for Ogre Mesh
 
-		EVector4D		minBoundingBox;	// Ä£ĞÍÕı·½Ìå°üÎ§ºĞ×îĞ¡µã
-		EVector4D		maxBoundingBox;	// Ä£ĞÍÕı·½Ìå°üÎ§ºĞ×ö´óµã
+		EVector4D		minBoundingBox;	// æ¨¡å‹æ­£æ–¹ä½“åŒ…å›´ç›’æœ€å°ç‚¹
+		EVector4D		maxBoundingBox;	// æ¨¡å‹æ­£æ–¹ä½“åŒ…å›´ç›’åšå¤§ç‚¹
 
-		// ÕâÀï²»ÂÛÊ¹ÆÀÒé»¹ÊÇËõ·Å, ¾ùÒÔµÚÒ»¸öÄ£ĞÍµÄ²ÎÊıÎª×¼
-		EVector4D		worldPosition;	// ÎïÌåµ±Ç°ÔÚÊÀ½ç×ø±êÖĞµÄÎ»ÖÃ
-		EVector4D		scale;			// ÎïÌåµ±Ç°Ëõ·ÅÖµ
+		// è¿™é‡Œä¸è®ºä½¿è¯„è®®è¿˜æ˜¯ç¼©æ”¾, å‡ä»¥ç¬¬ä¸€ä¸ªæ¨¡å‹çš„å‚æ•°ä¸ºå‡†
+		EVector4D		worldPosition;	// ç‰©ä½“å½“å‰åœ¨ä¸–ç•Œåæ ‡ä¸­çš„ä½ç½®
+		EVector4D		scale;			// ç‰©ä½“å½“å‰ç¼©æ”¾å€¼
 
-		EVector4D		direction;		// ÎïÌåµÄ·½ÏòÏòÁ¿, ¸÷·ÖÁ¿¼ÇÂ¼ÑÓ¸÷ÖáµÄĞı×ª½Ç¶È
+		EVector4D		direction;		// ç‰©ä½“çš„æ–¹å‘å‘é‡, å„åˆ†é‡è®°å½•å»¶å„è½´çš„æ—‹è½¬è§’åº¦
 	
 
-		EInt			vertexNumber;	// ¶¥µã¸öÊı
+		EInt			vertexNumber;	// é¡¶ç‚¹ä¸ªæ•°
 
-		EVertex4DArray	localList;		// ÎïÌå±ä»»Ç°µÄÎïÌå¾Ö²¿×ø±êÊı×é
-		EVertex4DArray	transformList;	// ÎïÌå±ä»»ºóµÄ×ø±ê
+		EVertex4DArray	localList;		// ç‰©ä½“å˜æ¢å‰çš„ç‰©ä½“å±€éƒ¨åæ ‡æ•°ç»„
+		EVertex4DArray	transformList;	// ç‰©ä½“å˜æ¢åçš„åæ ‡
 
-		EInt			polyonNumber;	// ÎïÌåµÄËù°üº¬¶à±ßĞÎµÄ¸öÊı
-		EPolyon4DArray	polyonList;		// ´æ´¢¶à±ßĞÎµÄÊı×é
+		EInt			polyonNumber;	// ç‰©ä½“çš„æ‰€åŒ…å«å¤šè¾¹å½¢çš„ä¸ªæ•°
+		EPolyon4DArray	polyonList;		// å­˜å‚¨å¤šè¾¹å½¢çš„æ•°ç»„
 
-		// Õâ¸ö±äÁ¿ÊÇÎªÁË´¦ÀíÒ»¸öµ¼ÈëµÄmeshÓĞ¶à¸ösubmeshµÄÇé¿öÀ´¿¼ÂÇµÄ, Èç¹ûÓĞ¶à¸ösubmeshµÄ»°
-		// nextObject != NULL ·ñÔò¸ÃÖ¸Õë»áÖ¸ÏòÏÂÒ»¸ösubmesh, Ö±ÖÁnextObject == NULL
+		// è¿™ä¸ªå˜é‡æ˜¯ä¸ºäº†å¤„ç†ä¸€ä¸ªå¯¼å…¥çš„meshæœ‰å¤šä¸ªsubmeshçš„æƒ…å†µæ¥è€ƒè™‘çš„, å¦‚æœæœ‰å¤šä¸ªsubmeshçš„è¯
+		// nextObject != NULL å¦åˆ™è¯¥æŒ‡é’ˆä¼šæŒ‡å‘ä¸‹ä¸€ä¸ªsubmesh, ç›´è‡³nextObject == NULL
 		EObject4D		*nextObject;
 
 		EObject4D();
 	};
 
-	// äÖÈ¾ÁĞ±í
+	// æ¸²æŸ“åˆ—è¡¨
 	struct ERenderList4D
 	{
-		EInt						state;		// ÎïÌå×´Ì¬
-		EInt						attribute;	// ÎïÌåÊôĞÔ
+		EInt						state;		// ç‰©ä½“çŠ¶æ€
+		EInt						attribute;	// ç‰©ä½“å±æ€§
 
-		std::list<EPolyonF4D>		polyData;	// ¾ßÌåµÄ¶à±ßĞÎÊı¾İ, Ê¹ÓÃË«¶Ë¶ÓÁĞ, É¾³ı¸üÓĞĞ§
+		std::list<EPolyonF4D>		polyData;	// å…·ä½“çš„å¤šè¾¹å½¢æ•°æ®, ä½¿ç”¨åŒç«¯é˜Ÿåˆ—, åˆ é™¤æ›´æœ‰æ•ˆ
 
 		typedef std::list<EPolyonF4D>::iterator Itr;
 	};
 
-	// ¶¥µã±ä»»¿ØÖÆ±ê¼Ç
+	// é¡¶ç‚¹å˜æ¢æ§åˆ¶æ ‡è®°
 	enum OBJ_TRANSFORM_TYPE
 	{
-		TRANSFORM_LOCAL = 0,			// Ö»¶Ô¾Ö²¿¶¥µãÁĞ±í½øĞĞ±ä»»
-		TRANSFORM_TRANS = 1,			// Ö»¶Ô±ä»»ºóµÄ¶¥µãÁĞ±í½øĞĞ±ä»»
-		TRANSFORM_LOCAL_TO_TRANS = 2,	// ¶Ô¾Ö²¿¶¨µãÁĞ±í½øĞĞ±ä»», ²¢½«½á¹û´æ´¢ÔÚ±ä»»ºóµÄ¶¥µãÁĞ±íÖĞ
+		TRANSFORM_LOCAL = 0,			// åªå¯¹å±€éƒ¨é¡¶ç‚¹åˆ—è¡¨è¿›è¡Œå˜æ¢
+		TRANSFORM_TRANS = 1,			// åªå¯¹å˜æ¢åçš„é¡¶ç‚¹åˆ—è¡¨è¿›è¡Œå˜æ¢
+		TRANSFORM_LOCAL_TO_TRANS = 2,	// å¯¹å±€éƒ¨å®šç‚¹åˆ—è¡¨è¿›è¡Œå˜æ¢, å¹¶å°†ç»“æœå­˜å‚¨åœ¨å˜æ¢åçš„é¡¶ç‚¹åˆ—è¡¨ä¸­
 	};
 
-	// ¶ÔEObject½øĞĞ±ä»», ¿ÉÒÔ½øĞĞÎ»ÒÆ±ä»»ºÍĞı×ª±ä»»
-	// tansformTypeÖ¸¶¨ÁË¶ÔÄÄÒ»¸ö¶¨µãÁĞ±í½øĞĞ±ä»»
-	// transformBasis Ö¸¶¨ÁËÊÇ·ñÒª¶Ô³¯ÏòÏòÁ¿½øĞĞ±ä»»
+	// å¯¹EObjectè¿›è¡Œå˜æ¢, å¯ä»¥è¿›è¡Œä½ç§»å˜æ¢å’Œæ—‹è½¬å˜æ¢
+	// tansformTypeæŒ‡å®šäº†å¯¹å“ªä¸€ä¸ªå®šç‚¹åˆ—è¡¨è¿›è¡Œå˜æ¢
+	// transformBasis æŒ‡å®šäº†æ˜¯å¦è¦å¯¹æœå‘å‘é‡è¿›è¡Œå˜æ¢
 	void Tranform_Object4D(	EObject4D* obj, 
 							const EMatrix44 &mat, 
 							OBJ_TRANSFORM_TYPE tansformType 
 							/*,EBool transformBasis = true*/);
 
-	// ¶ÔERenderList4D½øĞĞ±ä»», ¿ÉÒÔ½øĞĞÎ»ÒÆ±ä»»ºÍĞı×ª±ä»»
-	// tansformTypeÖ¸¶¨ÁË¶ÔÄÄÒ»¸ö¶¨µãÁĞ±í½øĞĞ±ä»»
+	// å¯¹ERenderList4Dè¿›è¡Œå˜æ¢, å¯ä»¥è¿›è¡Œä½ç§»å˜æ¢å’Œæ—‹è½¬å˜æ¢
+	// tansformTypeæŒ‡å®šäº†å¯¹å“ªä¸€ä¸ªå®šç‚¹åˆ—è¡¨è¿›è¡Œå˜æ¢
 	void Transform_Renderlist4D(ERenderList4D* renderList, 
 								const EMatrix44 &mat, 
 								OBJ_TRANSFORM_TYPE transformType);
 
-	// ½«Object²åÈëµ½RenderList, ÕâÀïLocalList´æ´¢µÄÊÇÔ­Ê¼×ø±ê, TransformList´æ´¢µÄÊÇ¾­¹ı
-	// Æ½ÒÆºÍËõ·ÅµÄ×ø±ê
+	// å°†Objectæ’å…¥åˆ°RenderList, è¿™é‡ŒLocalListå­˜å‚¨çš„æ˜¯åŸå§‹åæ ‡, TransformListå­˜å‚¨çš„æ˜¯ç»è¿‡
+	// å¹³ç§»å’Œç¼©æ”¾çš„åæ ‡
 	void Inert_Object4D_To_RenderList4D(ERenderList4D *renderList, EObject4D *obj, 
 									OBJ_TRANSFORM_TYPE transformType = TRANSFORM_LOCAL_TO_TRANS,
 									bool transformScaleAndPosition = false);
 
-	// ¾Ö²¿×ø±ê¶¨±àÁĞ±í±ä»»ÖÁÊÀ½ç×ø±ê, ÕâÀïÊÇÖ±½ÓÊ¹ÓÃ¼Ó·¨, ¶øÃ»ÓĞÊ¹ÓÃÓë¾ØÕóÏà³ËµÄ·½·¨, ÒòÎªÃ»ÓĞ±ØÒª
+	// å±€éƒ¨åæ ‡å®šç¼–åˆ—è¡¨å˜æ¢è‡³ä¸–ç•Œåæ ‡, è¿™é‡Œæ˜¯ç›´æ¥ä½¿ç”¨åŠ æ³•, è€Œæ²¡æœ‰ä½¿ç”¨ä¸çŸ©é˜µç›¸ä¹˜çš„æ–¹æ³•, å› ä¸ºæ²¡æœ‰å¿…è¦
 	void Local_To_World_Object4D(	EObject4D* obj, 
 									OBJ_TRANSFORM_TYPE transformType = TRANSFORM_LOCAL_TO_TRANS);
-	// ¾Ö²¿×ø±ê¶¨±àÁĞ±í±ä»»ÖÁÊÀ½ç×ø±ê, ÕâÀïÊÇÖ±½ÓÊ¹ÓÃ¼Ó·¨, ¶øÃ»ÓĞÊ¹ÓÃÓë¾ØÕóÏà³ËµÄ·½·¨, ÒòÎªÃ»ÓĞ±ØÒª
+	// å±€éƒ¨åæ ‡å®šç¼–åˆ—è¡¨å˜æ¢è‡³ä¸–ç•Œåæ ‡, è¿™é‡Œæ˜¯ç›´æ¥ä½¿ç”¨åŠ æ³•, è€Œæ²¡æœ‰ä½¿ç”¨ä¸çŸ©é˜µç›¸ä¹˜çš„æ–¹æ³•, å› ä¸ºæ²¡æœ‰å¿…è¦
 	void Local_To_World_RenderList4D( ERenderList4D *renderList,
 									const EVector4D &pos,
 									OBJ_TRANSFORM_TYPE transformType = TRANSFORM_LOCAL_TO_TRANS);
 
-	// ¶ÔÎïÌå½øĞĞÌŞ³ı
+	// å¯¹ç‰©ä½“è¿›è¡Œå‰”é™¤
 	bool Cull_Object4D(EObject4D *object, EFrustum *camera, CULL_TYPE cullType= CULL_SPHERE);
 
-	// Ïû³ı±³Ãæ, ±³ÃæÏû³ıËã·¨µÄÉãÏñ»úÊÓµãÊÇ»ùÓÚÊÀ½ç×ø±ê, ËùÒÔĞèÒªÔÚ¶¨µã±ä»»³ÉÉãÏñ»ú×ø±êÇ°½øĞĞ
-	// ±³ÃæÏû³ı
+	// æ¶ˆé™¤èƒŒé¢, èƒŒé¢æ¶ˆé™¤ç®—æ³•çš„æ‘„åƒæœºè§†ç‚¹æ˜¯åŸºäºä¸–ç•Œåæ ‡, æ‰€ä»¥éœ€è¦åœ¨å®šç‚¹å˜æ¢æˆæ‘„åƒæœºåæ ‡å‰è¿›è¡Œ
+	// èƒŒé¢æ¶ˆé™¤
 	bool Remove_Backface(EPolyon4D *poly, EFrustum *camera);
 	bool Remove_Backface(EPolyonF4D *poly, EFrustum *camera);
 	void Remove_Backface_Object4D(EObject4D *object, EFrustum *camera);
-	// light ÊÇ·ñ¶Ô¶à±ßĞÎ½øĞĞ¹âÕÕ´¦Àí
+	// light æ˜¯å¦å¯¹å¤šè¾¹å½¢è¿›è¡Œå…‰ç…§å¤„ç†
 	void Remove_Backface_RenderList4D(ERenderList4D *renderList, EFrustum *camera);
 
-	// ¹âÕÕ¼ÆËã
-	// ¹âÕÕ¼ÆËãÖ»ÄÜÔÚÊÀ½ç×ø±êÏµÏû³ı±³ÃæÖ®ºó»òÕßÔÚÉãÏñ»ú×ø±êÏµÖĞ½øĞĞ
+	// å…‰ç…§è®¡ç®—
+	// å…‰ç…§è®¡ç®—åªèƒ½åœ¨ä¸–ç•Œåæ ‡ç³»æ¶ˆé™¤èƒŒé¢ä¹‹åæˆ–è€…åœ¨æ‘„åƒæœºåæ ‡ç³»ä¸­è¿›è¡Œ
 	void Light_PolyonF4D(EPolyonF4D *poly, EFrustum *camera);
 	void Light_RenderList4D(ERenderList4D *renderList, EFrustum *camera);
 
-	// ÊÀ½ç×ø±ê±ä»»³ÉÉãÏñ»ú×ø±êÏµ
+	// ä¸–ç•Œåæ ‡å˜æ¢æˆæ‘„åƒæœºåæ ‡ç³»
 	void World_To_Camera_Object4D(EObject4D *obj, EFrustum *camera);
 	void World_To_Camera_RenderList4D(ERenderList4D *renderList, EFrustum *camera);
 
-	// ¶ÔRenderListµÄ¶à±ßĞÎ½øĞĞÉî¶ÈÅÅĞò, Ê¹ÓÃ»­¼ÒËã·¨
-	// ÕâÀïĞèÒªÔÚ¶à±ßĞÎ´¦ÓÚÉãÏñ»ú×ø±êÏµÊ±²Å¿ÉÒÔµ÷ÓÃ, ·ñÔò»á³öÏÖÎÊÌâ
+	// å¯¹RenderListçš„å¤šè¾¹å½¢è¿›è¡Œæ·±åº¦æ’åº, ä½¿ç”¨ç”»å®¶ç®—æ³•
+	// è¿™é‡Œéœ€è¦åœ¨å¤šè¾¹å½¢å¤„äºæ‘„åƒæœºåæ ‡ç³»æ—¶æ‰å¯ä»¥è°ƒç”¨, å¦åˆ™ä¼šå‡ºç°é—®é¢˜
 	void Sort_RenderList4D(ERenderList4D *renderList);
 
-	// ÉãÏñ»ú×ø±êÏµ×ª»»ÎªÍ¸ÊÓ×ø±êÏµ
+	// æ‘„åƒæœºåæ ‡ç³»è½¬æ¢ä¸ºé€è§†åæ ‡ç³»
 	void Camera_To_Perspective_Object4D(EObject4D *obj, EFrustum *camera);
 	void Camera_To_Perspective_RenderList4D(ERenderList4D *renderList, EFrustum *camera);
 
-	// Í¸ÊÓ×ø±êÏµ×ª»»ÖÁÆÁÄ»×ø±êÏµ
+	// é€è§†åæ ‡ç³»è½¬æ¢è‡³å±å¹•åæ ‡ç³»
 	void Perspective_To_Screen_Object4D(EObject4D *obj, EFrustum *camera);
 	void Perspective_To_Screen_RenderList4D(ERenderList4D *renderList, EFrustum *camera);
 
-	// ¶ÔRenderList4D½øĞĞ²Ã¼ô²Ù×÷, ²Ã¼ôµô³¬³öÉãÏñ»ú·¶Î§ÄÚµÄ¶à±ßĞÎ, ´Ë²Ù×÷±ØĞëÔÚÉãÏñ»ú¿Õ¼äÄÚÖ´ĞĞ
+	// å¯¹RenderList4Dè¿›è¡Œè£å‰ªæ“ä½œ, è£å‰ªæ‰è¶…å‡ºæ‘„åƒæœºèŒƒå›´å†…çš„å¤šè¾¹å½¢, æ­¤æ“ä½œå¿…é¡»åœ¨æ‘„åƒæœºç©ºé—´å†…æ‰§è¡Œ
 	void Clip_RenderList4D(ERenderList4D *renderList, EFrustum *camera);
 
-	// ÊÀ½ç×ø±ê±ä»»µ½ÆÁÄ»×ø±ê
-	// Ïàµ±ÓÚµ÷ÓÃ
+	// ä¸–ç•Œåæ ‡å˜æ¢åˆ°å±å¹•åæ ‡
+	// ç›¸å½“äºè°ƒç”¨
 	// World_To_Camera
-	// Perspective_To_ScreenµÄĞ§ÓÃ
-	// ÆäÄÚ²¿ÒÑ¾­Ö´ĞĞÁËÌŞ³ı, ±³ÃæÏû³ı, ¹âÕÕ´¦ÀíµÈ²Ù×÷
+	// Perspective_To_Screençš„æ•ˆç”¨
+	// å…¶å†…éƒ¨å·²ç»æ‰§è¡Œäº†å‰”é™¤, èƒŒé¢æ¶ˆé™¤, å…‰ç…§å¤„ç†ç­‰æ“ä½œ
 	void World_To_Screen_RenderList4D(ERenderList4D *renderList, EFrustum *camera);
 
 
-	// äÖÈ¾Ïß¿òÄ£ĞÍ
+	// æ¸²æŸ“çº¿æ¡†æ¨¡å‹
 	void Draw_Object4D_Wire(EObject4D *obj);
 	void Draw_RenderList4D_Wire(ERenderList4D *renderList);
 
-	// äÖÈ¾ÊµÌåÄ£ĞÍ
+	// æ¸²æŸ“å®ä½“æ¨¡å‹
 	void Draw_Object4D_Solid(EObject4D *object);
 	void Draw_RenderList4D_Solid(ERenderList4D *renderList);
 
-	// »æÖÆ´øÎÆÀíµÄrenderlist
+	// ç»˜åˆ¶å¸¦çº¹ç†çš„renderlist
 	void Draw_RenderList4D_Teture_Solid(ERenderList4D * renderList);
 ;}

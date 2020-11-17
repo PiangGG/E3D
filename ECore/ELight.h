@@ -27,10 +27,10 @@ namespace E3D
 		EColor specular;		//灯光高光颜色
 
 		EVector4D position;		//灯光世界坐标位置
-		EVector4D dirction;		//光源朝向，点光源无效
+		EVector4D direction;	//光源朝向，点光源无效
 
-		EVector4D transPosion;	//灯光摄像机位置
-		EVector4D transDirction;//摄像机光源朝向，点光源无效
+		EVector4D transPosition;	//灯光摄像机位置
+		EVector4D transDirection;//摄像机光源朝向，点光源无效
 
 		EFloat kc, kl, kq;		//衰减因子
 

@@ -3,7 +3,7 @@
 namespace E3D 
 {
     ELight::ELight(EInt LightId, LIGHT_TYPE type) :id(LightId),lightOn(true),lightType(type),
-    ambient(255,255,255),diffuse(255,255,255),specular(255,255,255),position(0,0,0),dirction(0,0,1),
+    ambient(255,255,255),diffuse(255,255,255),specular(255,255,255),position(0,0,0),direction(0,0,1),
         kc(1.0f),kl(1.0f),kq(1.0f),spot_inner(45.0f),spot_outer(60.0f),power(1.0f),shadowFactor(0.05f){}
 
     std::vector<ELight*>* GLights = NULL;
