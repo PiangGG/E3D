@@ -107,20 +107,7 @@ D:\Code\cpp\Gmae Engine\E3D\ECore\E3DHeader.h(1,1): warning C4819: 该文件包�
 D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.h(56,84): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
 D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.h(59,79): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-D:\Code\cpp\Gmae Engine\E3D\ECore\EGraphics.cpp(8,108): error C2664: “HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)”: 无法将参数 2 从“const _Elem *”转换为“LPCWSTR”
-          with
-          [
-              _Elem=char
-          ]
-D:\Code\cpp\Gmae Engine\E3D\ECore\EGraphics.cpp(8,69): message : 与指向的类型无关；强制转换要求 reinterpret_cast、C 样式强制转换或函数样式强制转换
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(10815,1): message : 参见“LoadImageW”的声明
-D:\Code\cpp\Gmae Engine\E3D\ECore\EGraphics.cpp(145,58): error C2664: “BOOL TextOutW(HDC,int,int,LPCWSTR,int)”: 无法将参数 4 从“const _Elem *”转换为“LPCWSTR”
-          with
-          [
-              _Elem=char
-          ]
-D:\Code\cpp\Gmae Engine\E3D\ECore\EGraphics.cpp(145,42): message : 与指向的类型无关；强制转换要求 reinterpret_cast、C 样式强制转换或函数样式强制转换
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wingdi.h(5101,25): message : 参见“TextOutW”的声明
+D:\Code\cpp\Gmae Engine\E3D\ECore\EGraphics.cpp(145,58): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
   ELight.cpp
 D:\Code\cpp\Gmae Engine\E3D\ECore\ELight.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\Code\cpp\Gmae Engine\E3D\ECore\ECommon.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -180,3 +167,4 @@ D:\Code\cpp\Gmae Engine\E3D\ECore\E3DHeader.h(1,1): warning C4819: 该文件包�
 D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.h(56,84): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
 D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.h(59,79): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
   EVector.cpp
+  ECore.vcxproj -> D:\Code\cpp\Gmae Engine\E3D\E3D\x64\Release\ECore.lib

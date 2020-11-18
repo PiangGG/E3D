@@ -78,7 +78,7 @@ namespace E3D
 		}
 		GEMaterials->clear();
 	}
-	void ParseMaterial(const EString& scriptName)
+	void ParseMaterialScript(const EString& scriptName)
 	{
 		std::ifstream in;
 		//材质脚本首先获取默认路径

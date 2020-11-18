@@ -18,11 +18,21 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ECamera.h" />
+    <ClInclude Include="EMeshUtil.h" />
+    <ClInclude Include="EOgreMeshInfo.h" />
+    <ClInclude Include="InputListener.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ECamera.cpp" />
+    <ClCompile Include="EMeshUtil.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{df02bfad-94c9-4137-9eaa-44811bb16d0c}</ProjectGuid>
-    <RootNamespace>ECore</RootNamespace>
+    <ProjectGuid>{12d170dd-6358-4c32-b009-2947a64863e4}</ProjectGuid>
+    <RootNamespace>EEngine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -43,14 +53,14 @@
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -122,7 +132,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
@@ -140,7 +150,6 @@
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -150,33 +159,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="E3DHeader.h" />
-    <ClInclude Include="ECommon.h" />
-    <ClInclude Include="ECore.h" />
-    <ClInclude Include="EFrustum.h" />
-    <ClInclude Include="EGraphics.h" />
-    <ClInclude Include="ELight.h" />
-    <ClInclude Include="EMaterial.h" />
-    <ClInclude Include="EMath.h" />
-    <ClInclude Include="EUtil.h" />
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="EMatrix.h" />
-    <ClInclude Include="EVector.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="ECore.cpp" />
-    <ClCompile Include="EFrustum.cpp" />
-    <ClCompile Include="EGraphics.cpp" />
-    <ClCompile Include="ELight.cpp" />
-    <ClCompile Include="EMaterial.cpp" />
-    <ClCompile Include="EMath.cpp" />
-    <ClCompile Include="EMatrix.cpp" />
-    <ClCompile Include="EUtil.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="EVector.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

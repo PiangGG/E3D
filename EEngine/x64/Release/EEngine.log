@@ -1,0 +1,26 @@
+﻿  ECamera.cpp
+D:\Code\cpp\Gmae Engine\E3D\EEngine\ECamera.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\EEngine\ECamera.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\ECommon.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\E3DHeader.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\EFrustum.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\EVector.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.h(56,84): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.h(59,79): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+D:\Code\cpp\Gmae Engine\E3D\ECore\EMatrix.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\ECore.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  EMeshUtil.cpp
+D:\Code\cpp\Gmae Engine\E3D\EEngine\EMeshUtil.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\EEngine\EMeshUtil.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\ECommon.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\E3DHeader.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\ECore.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\EVector.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.h(56,84): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+D:\Code\cpp\Gmae Engine\E3D\ECore\EUtil.h(59,79): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+D:\Code\cpp\Gmae Engine\E3D\EEngine\EOgreMeshInfo.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\EMaterial.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\ECore\EGraphics.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  EEngine.vcxproj -> D:\Code\cpp\Gmae Engine\E3D\E3D\x64\Release\EEngine.lib

@@ -30,5 +30,5 @@ namespace E3D
 
 	//解析材质脚本，读取基本材质和贴图
 	//材质脚本必须和模型名称相同 如ogreHead.mesh ogreHead.material
-	extern void ParseMaterial(const EString &scriptName);
+	extern void ParseMaterialScript(const EString &scriptName);
 }
