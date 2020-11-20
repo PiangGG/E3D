@@ -3,7 +3,7 @@
 namespace E3D 
 {
 	//鼠标键盘监听事件
-	class InputListener
+	class EInputListener
 	{
 	public:
 		virtual EBool keyPress(EInt key) = 0;
@@ -15,7 +15,7 @@ namespace E3D
 		virtual EBool mouseMove(EInt x,EInt y)=0;
 		virtual EBool mouseWheel(EInt delta)=0;
 		
-		virtual ~InputListener() {};
+		virtual ~EInputListener() {};
 
 	private:
 

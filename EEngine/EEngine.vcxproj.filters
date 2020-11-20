@@ -24,13 +24,31 @@
     <ClInclude Include="ECamera.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="InputListener.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="EOgreMeshInfo.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="EMeshUtil.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="EObject.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="EMesh.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ESceneManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ECanvas.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="EWindows.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="EInputListener.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="EParticle.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
@@ -39,6 +57,18 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="EMeshUtil.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="EMesh.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="EWindow.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="EParticle.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ESceneManager.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>

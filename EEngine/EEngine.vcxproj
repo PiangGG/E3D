@@ -20,13 +20,23 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ECamera.h" />
+    <ClInclude Include="ECanvas.h" />
     <ClInclude Include="EMeshUtil.h" />
+    <ClInclude Include="EObject.h" />
     <ClInclude Include="EOgreMeshInfo.h" />
-    <ClInclude Include="InputListener.h" />
+    <ClInclude Include="EParticle.h" />
+    <ClInclude Include="ESceneManager.h" />
+    <ClInclude Include="EWindows.h" />
+    <ClInclude Include="EInputListener.h" />
+    <ClInclude Include="EMesh.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ECamera.cpp" />
+    <ClCompile Include="EMesh.cpp" />
     <ClCompile Include="EMeshUtil.cpp" />
+    <ClCompile Include="EParticle.cpp" />
+    <ClCompile Include="ESceneManager.cpp" />
+    <ClCompile Include="EWindow.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -60,7 +70,7 @@
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">

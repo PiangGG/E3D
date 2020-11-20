@@ -42,11 +42,11 @@ namespace E3D
 	static EString GetPath(const EString& file) { return DefaultPath + file; }
 
 	//数学常量
-	#define		PI 3.141592654f;
-	#define		PI2 (PI*2.0f);
-	#define		PI_DIV_2 (PI*0.5f);
-	#define		PI_DIV_4 (PI*0.25f);
-	#define		PI_INV 0.318309886f;
+	#define		PI 3.141592654f
+	#define		PI2 (PI*2.0f)
+	#define		PI_DIV_2 (PI*0.5f)
+	#define		PI_DIV_4 (PI*0.25f)
+	#define		PI_INV 0.318309886f
 
 	//计算精度
 	#define	EPSILON_E6 ((EFloat)(1E-6))
