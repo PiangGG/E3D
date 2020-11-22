@@ -1,90 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
+    <Filter Include="src">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="include">
-      <UniqueIdentifier>{ae6fa7df-8a88-4a18-b56e-43f8396e8e9c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src">
-      <UniqueIdentifier>{1c718a38-e704-406e-9f0f-84377275cc69}</UniqueIdentifier>
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ECommon.h">
+    <ClCompile Include="src\ECore.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EFrustum.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EGraphics.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELight.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EMaterial.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EMath.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EMatrix.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EUtil.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EVector.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ECommon.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="E3DHeader.h">
+    <ClInclude Include="include\ECore.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="EMatrix.h">
+    <ClInclude Include="include\EFrustum.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="EUtil.h">
+    <ClInclude Include="include\EGraphics.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="ELight.h">
+    <ClInclude Include="include\ELight.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="EVector.h">
+    <ClInclude Include="include\EMaterial.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="EFrustum.h">
+    <ClInclude Include="include\EMath.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="EMath.h">
+    <ClInclude Include="include\EMatrix.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="ECore.h">
+    <ClInclude Include="include\EUtil.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="EGraphics.h">
+    <ClInclude Include="include\EVector.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="EMaterial.h">
+    <ClInclude Include="include\E3DHeader.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EMatrix.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="EUtil.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="EVector.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="ELight.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="EFrustum.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="EMath.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="EGraphics.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="EMaterial.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="ECore.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
+    <None Include="ECore.cd" />
   </ItemGroup>
 </Project>

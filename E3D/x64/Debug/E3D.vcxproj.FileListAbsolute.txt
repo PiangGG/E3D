@@ -1,2 +1,0 @@
-D:\Code\cpp\Gmae Engine\E3D\x64\Debug\E3D.exe
-D:\Code\cpp\Gmae Engine\E3D\x64\Debug\E3D.pdb

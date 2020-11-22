@@ -1,2 +1,0 @@
-D:\Code\cpp\Gmae Engine\E3D\E3D\x64\Debug\ECore.pdb
-D:\Code\cpp\Gmae Engine\E3D\ECore\x64\Debug\ECore.pdb

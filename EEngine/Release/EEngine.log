@@ -1,0 +1,16 @@
+﻿  ECamera.cpp
+D:\Code\cpp\Gmae Engine\E3D\ECore\include\ECommon.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  EMesh.cpp
+D:\Code\cpp\Gmae Engine\E3D\ECore\include\ECommon.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  EMeshUtil.cpp
+D:\Code\cpp\Gmae Engine\E3D\ECore\include\ECommon.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  EParticle.cpp
+D:\Code\cpp\Gmae Engine\E3D\ECore\include\ECommon.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  ESceneManager.cpp
+D:\Code\cpp\Gmae Engine\E3D\ECore\include\ECommon.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  EWindow.cpp
+D:\Code\cpp\Gmae Engine\E3D\ECore\include\ECommon.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Code\cpp\Gmae Engine\E3D\EEngine\src\EWindow.cpp(54,53): warning C4244: “参数”: 从“float”转换到“E3D::EInt”，可能丢失数据
+D:\Code\cpp\Gmae Engine\E3D\EEngine\src\EWindow.cpp(265,13): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1469,5): warning MSB8012: TargetPath(D:\Code\cpp\Gmae Engine\E3D\Release\EEngine.lib) 与 Library 的 OutputFile 属性值(D:\Code\cpp\Gmae Engine\E3D\Lib\EEngine.lib)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+  EEngine.vcxproj -> D:\Code\cpp\Gmae Engine\E3D\Release\EEngine.lib

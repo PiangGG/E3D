@@ -1,0 +1,13 @@
+﻿cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+  EWindow.cpp
+D:\BaiduNetdiskDownload\E3D11\EEngine\src\EWindow.cpp(54,53): warning C4244: “参数”: 从“float”转换到“E3D::EInt”，可能丢失数据
+D:\BaiduNetdiskDownload\E3D11\EEngine\src\EWindow.cpp(265,13): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  ESceneManager.cpp
+  EParticle.cpp
+  EMeshUtil.cpp
+  EMesh.cpp
+  ECamera.cpp
+  正在生成代码...
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1469,5): warning MSB8012: TargetPath(D:\BaiduNetdiskDownload\E3D11\Debug\EEngine.lib) 与 Library 的 OutputFile 属性值(D:\BaiduNetdiskDownload\E3D11\Lib\EEngine_d.lib)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1471,5): warning MSB8012: TargetName(EEngine) 与 Library 的 OutputFile 属性值(EEngine_d)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+  EEngine.vcxproj -> D:\BaiduNetdiskDownload\E3D11\Debug\EEngine.lib
